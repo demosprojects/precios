@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Detector de Precios</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tesseract.js/4.0.2/tesseract.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Escanea el precio</h1>
+        <div class="file-input-container">
+            <label for="fileInput" class="file-input-label">Subir imagen</label>
+            <input type="file" id="fileInput" accept="image/*" capture="environment">
+        </div>
+        <div id="imagePreview"></div> <!-- Vista previa de la imagen -->
+        <p>Precio detectado: <input type="number" id="priceInput" step="0.01"></p>
+        <p id="warningText" class="warning"></p> <!-- Mensaje de advertencia -->
+        <button id="confirmPrice">Confirmar</button>
+        <p id="totalText">Total acumulado: $0.00</p>
+        <ul id="priceList"></ul> <!-- Lista de precios -->
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
